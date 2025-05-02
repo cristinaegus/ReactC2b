@@ -12,6 +12,18 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.main-container {
+  max-width: 1200px; /* Ancho máximo para pantallas grandes */
+  width: 100%; /* Asegura que ocupe todo el ancho en pantallas pequeñas */
+  margin: 0 auto; /* Centra el contenido */
+  padding: 20px; /* Espaciado interno */
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 10px; /* Reduce el padding en pantallas pequeñas */
+  }
+}
 
 a {
   font-weight: 500;
@@ -26,14 +38,22 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  min-width: 1200px;
   min-height: 100vh;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  text-align: center;
 }
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em; /* Reduce el tamaño del título en pantallas pequeñas */
+  }
+}
+
 
 button {
   border-radius: 8px;
@@ -46,12 +66,35 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
+@media (max-width: 768px) {
+  button {
+    padding: 0.4em 1em; /* Reduce el padding en pantallas pequeñas */
+    font-size: 0.9em; /* Reduce el tamaño del texto del botón */
+  }
+}
+
 button:hover {
   border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.navbar {
+  padding: 10px 20px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 5px 10px; /* Reduce el padding en pantallas pequeñas */
+  }
+}
+
+img {
+  max-width: 100%; /* Asegura que las imágenes no excedan el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de las imágenes */
 }
 
 @media (prefers-color-scheme: light) {
@@ -66,3 +109,4 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+

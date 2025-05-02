@@ -3,6 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "../src/estilos.css"; // Importa el archivo CSS para estilos globales
 import { Title } from "./components/Title.jsx"; // Importa el componente Title
+import { Navbar } from "./components/navbar.jsx"; // Importa el componente Navbar
 import React from "react"; // import { Title } from "./Title.jsx"; // Importa el componente Title
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
 
   return (
     
-    <div>
+    <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "20px" }}>
+      <Navbar /> {/* Add the Navbar component */} 
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
