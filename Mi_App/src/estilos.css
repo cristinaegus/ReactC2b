@@ -54,6 +54,14 @@ h1 {
   }
 }
 
+app-title {
+  font-size: 2em;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
 
 button {
   border-radius: 8px;
@@ -92,6 +100,37 @@ button:focus-visible {
   }
 }
 
+.navbar-centered {
+  position: absolute; /* Posiciona la navbar de forma absoluta */
+  top: 10%; /* Centra verticalmente */
+  left: 50%; /* Centra horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta el punto de referencia al centro */
+  width: auto; /* Ajusta el ancho automáticamente */
+  text-align: center; /* Centra el contenido dentro de la navbar */
+}
+
+.navbar-container {
+  margin-bottom: 20px; /* Espaciado entre Navbar y Title */
+}
+
+.app-title {
+  text-align: center;
+  margin-top: 30px; /* Espaciado superior opcional */
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
 img {
   max-width: 100%; /* Asegura que las imágenes no excedan el ancho del contenedor */
   height: auto; /* Mantiene la proporción de las imágenes */
@@ -109,4 +148,5 @@ img {
     background-color: #f9f9f9;
   }
 }
+
 
